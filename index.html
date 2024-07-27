@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dineshman Bajracharya - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dineshman Bajracharya - Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaqueries.css">
+    </head>
 <body>
     <nav id="desktop-nav">
         <div class="logo">Dineshman Bajracharya</div>
@@ -18,6 +18,12 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Project</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle dark mode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -32,10 +38,15 @@
             </div>
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li>
+                    <button id="mobile-theme-toggle" aria-label="Toggle dark mode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    </button>
+                </li>
             </div>
         </div>
     </nav>
@@ -56,10 +67,15 @@
                 </button>
             </div>
             <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://linkedin.com/in/dineshman/'">
-                <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/dineshmanbajracharya'">
+                <a href="https://linkedin.com/in/dineshman/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon light-mode-icon">
+                    <img src="./assets/linkedin_dark.png" alt="My LinkedIn profile" class="icon dark-mode-icon">
+                </a>
+                <a href="https://github.com/dineshmanbajracharya" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/github.png" alt="My Github profile" class="icon light-mode-icon">
+                    <img src="./assets/github_dark.png" alt="My Github profile" class="icon dark-mode-icon">
+                </a>
             </div>
-        </div>
     </section>
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
@@ -204,20 +220,26 @@
 </section>
 
 
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
-                <p><a href="mailto:dineshmanbajracharya@outlook.com">Email</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
-                <p><a href="https://www.linkedin.com/in/dineshman/">LinkedIn</a></p>
-            </div>
+<section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+            <a href="mailto:dineshmanbajracharya@outlook.com">
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon light-mode-icon">
+                <img src="./assets/email_dark.png" alt="Email icon" class="icon contact-icon email-icon dark-mode-icon">
+                <p>Email</p>
+            </a>
         </div>
-    </section>
+        <div class="contact-info-container">
+            <a href="https://www.linkedin.com/in/dineshman/">
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon light-mode-icon">
+                <img src="./assets/linkedin_dark.png" alt="LinkedIn icon" class="icon contact-icon dark-mode-icon">
+                <p>LinkedIn</p>
+            </a>
+        </div>
+    </div>
+</section>
     <footer>
         <nav>
             <div class="nav-links-container">
