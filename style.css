@@ -320,7 +320,7 @@ section {
 .about-content {
   font-size: 1.2rem;
   line-height: 1.6;
-  text-align: justify;
+  text-align:left;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -411,7 +411,7 @@ section {
 }
 
 .experience-icon {
-  width: 400px;
+  width: 200px;
   height: 300px;
   object-fit: contain;
 }
